@@ -1,0 +1,283 @@
+.hero {
+  display: grid;
+  grid-template: auto 1fr / repeat(12, 1fr);
+  min-height: calc(100svh - (2rem + 1.5rem) - 1rem);
+  margin: 0 1rem 1rem;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.hero-title {
+  grid-area: 1 / 1 / 2 / 10;
+  container-type: inline-size;
+  width: 100%;
+  color: var(--clr-scndry-blue);
+}
+
+.hero-title h1 {
+  font-size: clamp(15rem, 3rem + 15vw, 18rem);
+  line-height: 80%;
+}
+
+.hero-snake {
+  grid-area: 1 / 10 / 3 / 13;
+  height: calc(100svh - (2rem + 1.5rem) - 1rem);
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.hero-snake div {
+  padding: 1rem;
+  background-color: var(--clr-scndry-blue);
+}
+
+.hero-snake img {
+  width: 100%;
+}
+
+.hero-description {
+  align-self: end;
+  grid-area: 2 / 5 / 3 / 9;
+  margin: 4rem 0;
+}
+
+.hero-scroll {
+  align-self: end;
+  justify-self: start;
+  grid-area: 2 / 1 / 2 / 2;
+  writing-mode: vertical-lr;
+  color: var(--clr-txt-dark-grey);
+}
+
+@media (max-width: 1280px) {
+  .hero-title {
+    grid-area: 1 / 1 / 2 / 9;
+
+    & h1 {
+      font-size: 26cqw;
+    }
+  }
+
+  .hero-snake {
+    grid-area: 1 / 9 / 3 / 13;
+  }
+
+  .hero-description {
+    grid-area: 2 / 3 / 3 / 9;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template: auto auto 1fr auto / 1fr;
+  }
+
+  .hero-title,
+  .hero-snake,
+  .hero-description,
+  .hero-scroll {
+    grid-area: span 1 / span 1;
+  }
+
+  .hero-snake {
+    height: 300px;
+    min-height: 0;
+  }
+
+  .hero-description {
+    align-self: start;
+    margin: 0 0 8rem;
+  }
+
+  .hero-scroll {
+    writing-mode: horizontal-tb;
+  }
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0 4rem;
+  color: var(--clr-txt-white);
+  background-color: var(--clr-scndry-blue);
+}
+
+.work-grid {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, 1fr);
+  counter-reset: cs-count;
+}
+
+.cs_grid {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  counter-increment: cs-count;
+  height: 100%;
+
+  & .cover {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & .details {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2.5rem 2rem;
+  }
+
+  & .description {
+    display: flex;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  & .title {
+    display: flex;
+    gap: 0.25rem;
+
+    & .counter:before {
+      content: "0" counter(cs-count) " /";
+      white-space: nowrap;
+    }
+  }
+
+  & dl {
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  & a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.work-button {
+  align-self: center;
+  margin: 1rem 1rem 0;
+}
+
+@media (max-width: 1280px) {
+  .cs_grid {
+    & .description {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .work-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0 4rem;
+}
+
+.about-grid {
+  display: grid;
+  position: relative;
+  grid-template: repeat(2, auto) / repeat(12, 1fr);
+  gap: 1.5rem 2rem;
+  padding: 4rem 2rem 2.5rem;
+}
+
+.about-bio {
+  grid-area: 2 / 2 / 3 / 5;
+  margin-top: 1.75rem;
+}
+
+.about-skills-title {
+  grid-area: 1 / 6 / 2 / 10;
+}
+
+.about-skills {
+  grid-area: 2 / 6 / 3 / 10;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: repeat(3, auto) / subgrid;
+  row-gap: 2rem;
+  align-self: start;
+}
+
+.skill-group {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-skills dt {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--clr-txt-dark-grey);
+}
+
+.about-grid img {
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  width: 220px;
+  right: 2rem;
+  bottom: 1rem;
+  rotate: 10deg;
+}
+
+.about-button {
+  align-self: center;
+  margin: 1rem 1rem 0;
+}
+
+@media (max-width: 1280px) {
+  .about-grid {
+    column-gap: 1rem;
+  }
+
+  .about-bio {
+    grid-area: 2 / 1 / 3 / 5;
+  }
+
+  .about-skills {
+    grid-area: 2 / 6 / 3 / 13;
+  }
+
+  .skill-group {
+    grid-column: span 3;
+  }
+
+  .about-skills::before {
+    content: "";
+    grid-area: 1 / 4 /4 / 5;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-skills {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .about-bio {
+    margin: 0 0 2.5rem;
+  }
+
+  .about-grid img {
+    width: 128px;
+    right: 1rem;
+    bottom: 2.25rem;
+  }
+}
