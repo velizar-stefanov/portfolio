@@ -45,7 +45,7 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   font-size: clamp(12.25rem, 6.75rem + 6.875vw, 15rem);
 }
 
@@ -54,7 +54,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   font-size: clamp(8rem, 3.5rem + 5.625vw, 10.25rem);
 }
 
@@ -63,7 +63,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   font-size: 4rem;
 }
 
@@ -72,7 +72,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   font-size: 2rem;
 }
 
@@ -80,7 +80,7 @@ p {
   font-family: "Instrument Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   font-size: 1.25rem;
 }
 
@@ -88,7 +88,7 @@ p {
   font-family: "Instrument Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   font-size: 1rem;
 }
 
@@ -96,7 +96,7 @@ p {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   font-size: 1rem;
 }
 
@@ -104,7 +104,7 @@ p {
   font-family: "Instrument Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   font-size: 0.75rem;
   text-transform: uppercase;
 }
@@ -114,7 +114,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 85%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   font-size: 1.25rem;
 }
 
@@ -123,7 +123,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 85%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   font-size: 1rem;
 }
 
