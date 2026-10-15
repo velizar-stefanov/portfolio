@@ -205,16 +205,16 @@
 .about-skills {
   grid-area: 2 / 6 / 3 / 10;
   display: grid;
-  grid-auto-flow: column;
-  grid-template: repeat(3, auto) / subgrid;
+  grid-template: auto / subgrid;
   row-gap: 2rem;
   align-self: start;
 }
 
-.skill-group {
+.skill-column {
   grid-column: span 2;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .about-skills dt {
@@ -250,13 +250,17 @@
     grid-area: 2 / 6 / 3 / 13;
   }
 
-  .skill-group {
+  .skill-column {
     grid-column: span 3;
   }
 
   .about-skills::before {
     content: "";
-    grid-area: 1 / 4 /4 / 5;
+    grid-area: 1 / 4 / 2 / 5;
+  }
+
+  .about-grid img {
+    width: 180px;
   }
 }
 
@@ -279,5 +283,9 @@
     width: 128px;
     right: 1rem;
     bottom: 2.25rem;
+  }
+
+  .about-skills::before {
+    display: none;
   }
 }
