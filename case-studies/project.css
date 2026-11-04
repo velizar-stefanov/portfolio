@@ -118,7 +118,8 @@ article {
     grid-column: 4 / 8;
   }
 
-  img {
+  img,
+  video {
     width: 100%;
   }
 
@@ -158,7 +159,7 @@ article {
   }
 
   & .image-margin {
-    margin: 2.5rem 0;
+    margin: 4rem 0;
   }
 
   & .list-bullet li {
@@ -181,6 +182,12 @@ article {
 
   & h3 {
     margin: 2.5rem 0 1.5rem;
+  }
+
+  & figcaption {
+    color: var(--clr-txt-dark-grey);
+    text-transform: uppercase;
+    margin-bottom: 8px;
   }
 
   & .button {
